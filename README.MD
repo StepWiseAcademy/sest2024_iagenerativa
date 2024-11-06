@@ -14,7 +14,9 @@ O repositório está organizado em pastas e arquivos que cobrem os seguintes tó
 Este minicurso é voltado para **iniciantes a intermediários** em aprendizado de máquina, interessados em explorar IA generativa. Recomenda-se familiaridade com Python e conceitos básicos de estátistica e redes neurais.
 
 
-## Adicionar instruções de RAG
+## Instruções de RAG
+- Instalar [ollama](https://ollama.com/)
+- Com o Ollama instalado, abra o CMD ou Terminal e execute ''ollama pull [nomic-embed-text](https://www.bing.com/search?pglt=169&q=nomic-embed-text&cvid=82a471cbc070441290d053f284a8ccb4&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIICAEQ6QcY_FXSAQczNjNqMGoxqAIAsAIA&FORM=ANNAB1&PC=U531)''
 
 ## Instruções para solução de Rótulo
 Para a solução de rótulos, primeiros passos:<br/>
