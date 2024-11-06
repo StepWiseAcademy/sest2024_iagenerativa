@@ -15,8 +15,21 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 
 
 ## Instruções de RAG
-- Instalar [ollama](https://ollama.com/)
-- Com o Ollama instalado, abra o CMD ou Terminal e execute ''ollama pull [nomic-embed-text](https://www.bing.com/search?pglt=169&q=nomic-embed-text&cvid=82a471cbc070441290d053f284a8ccb4&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIICAEQ6QcY_FXSAQczNjNqMGoxqAIAsAIA&FORM=ANNAB1&PC=U531)''
+- Baixe e instale o [ollama](https://ollama.com/)
+- Após a instalação, abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ``ollama pull [nomic-embed-text](https://www.bing.com/search?pglt=169&q=nomic-embed-text&cvid=82a471cbc070441290d053f284a8ccb4&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIICAEQ6QcY_FXSAQczNjNqMGoxqAIAsAIA&FORM=ANNAB1&PC=U531)``
+> **Configurando o Ambiente no VSCode**
+- Abra a pasta do projeto no VSCode 
+- Instale as extensões oficiais para Python
+- Crie um novo ambiente virtual: Pressione ``Ctrl+Shit+P`` e selecione ``Python: Create Environment``
+- Se houver um arquivo ``requirements.txt`` no diretório, o VSCode mostrará uma opção para selecioná-lo. Isso instalará automaticamente as dependências
+- Após a criação do ambiente, selecione o interpretador: Pressione ``Ctral+Shit+P``, escolha ``Python: Select Interpreter`` e  selecione a versão do Python que está dentro do ``(venv)``
+- Se o arquivo ``requirements.txt`` não tiver sido carregado, abra o terminal Pressionando ``Ctrl+"``, clique no botão de ``+`` e selecione Command Prompt
+- Instale as dependências manualmente executando: ``pip install -r requirements.txt``
+>**Configurando o Ambiente no Terminal**
+- Em um outro terminal execute o comando ``python -m venv venv`` para criar um ambiente virtual de desenvolvimento do Python
+- Carregue o ambiente virtual usando o comando ``.\venv\Scripts\activate``
+- Com o ambiente carregado use ``pip install -r requirements.txt``
+- Execute o código rodando o comando ``python .\llm_rotulos_simples.py``
 
 ## Instruções para solução de Rótulo
 Para a solução de rótulos, primeiros passos:<br/>
