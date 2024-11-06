@@ -16,7 +16,7 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 
 ## Instruções de RAG
 - Baixe e instale o [ollama](https://ollama.com/)
-- Após a instalação, abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ``ollama pull [nomic-embed-text](https://www.bing.com/search?pglt=169&q=nomic-embed-text&cvid=82a471cbc070441290d053f284a8ccb4&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIICAEQ6QcY_FXSAQczNjNqMGoxqAIAsAIA&FORM=ANNAB1&PC=U531)``
+- Após a instalação, abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ollama pull [nomic-embed-text](https://www.bing.com/search?pglt=169&q=nomic-embed-text&cvid=82a471cbc070441290d053f284a8ccb4&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIICAEQ6QcY_FXSAQczNjNqMGoxqAIAsAIA&FORM=ANNAB1&PC=U531)
 > **Configurando o Ambiente no VSCode**
 - Abra a pasta do projeto no VSCode 
 - Instale as extensões oficiais para Python
