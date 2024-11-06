@@ -2,7 +2,6 @@ from langchain_core.prompts import PromptTemplate
 from langchain_ollama.llms import OllamaLLM
 import pandas as pd
 
-
 NUM_MENSAGENS_CLASSIFICAR = 20
 
 template_ruim = """
@@ -41,7 +40,6 @@ def query_llm(message: str):
 df = pd.read_csv('twitter_validation.csv')
 df.columns = ["ID", "entity", "sentiment", "Tweet"]
 
-
 # Limitar ao número de mensagens a serem classificadas
 df_reduzido = df.head(NUM_MENSAGENS_CLASSIFICAR).copy()
 
@@ -50,7 +48,6 @@ df_reduzido['Tweet'] = df_reduzido['Tweet'].apply(lambda tweet: tweet.strip().re
 
 # Função para aplicar o LLM ao tweet
 df_reduzido['sentiment_llama'] = df_reduzido['Tweet'].apply(lambda tweet: query_llm(tweet.replace("\n", "")))
-
 
 # Exportar resultado para CSV
 df_reduzido.to_csv('classificacao.csv', index=False)
