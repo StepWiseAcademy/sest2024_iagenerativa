@@ -21,9 +21,9 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 > **Configurando o Ambiente no VSCode**
 - Abra a pasta do projeto no VSCode 
 - Instale as extensões oficiais para Python
-- Crie um novo ambiente virtual: Pressione ``Ctrl+Shit+P`` e selecione ``Python: Create Environment``
+- Crie um novo ambiente virtual: Pressione ``Ctrl+Shift+P`` e selecione ``Python: Create Environment``
 - Se houver um arquivo ``requirements.txt`` no diretório, o VSCode mostrará uma opção para selecioná-lo. Isso instalará automaticamente as dependências
-- Após a criação do ambiente, selecione o interpretador: Pressione ``Ctral+Shit+P``, escolha ``Python: Select Interpreter`` e  selecione a versão do Python que está dentro do ``(venv)``
+- Após a criação do ambiente, selecione o interpretador: Pressione ``Ctral+Shift+P``, escolha ``Python: Select Interpreter`` e  selecione a versão do Python que está dentro do ``(venv)``
 - Se o arquivo ``requirements.txt`` não tiver sido carregado, abra o terminal Pressionando ``Ctrl+"``, clique no botão de ``+`` e selecione Command Prompt
 - Instale as dependências manualmente executando: ``pip install -r requirements.txt``
 
