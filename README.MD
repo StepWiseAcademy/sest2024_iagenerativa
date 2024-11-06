@@ -34,11 +34,15 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 - Execute o código rodando o comando ``python .\llm_rotulos_simples.py``
 
 >**Carregando Novos Arquivos ao Banco de Dados**
+- Adicione novos arquivos a parta ``rag/documentos/``
 - Execute individualmente o arquivo localizado no diretório ``rag/backend/chroma_db.py``
 
 >**Atualizando a Chave da API para o Groq AI**
-- Caso não exista
+- Crie o arquivo ``rag/.streamlit/secrets.toml``, caso não exista
+- Dentro do arquivo salve a [chave da API](https://groq.com/) como: groq_key='API KEY'
+
 >**Inicionalizando o Servidor Flask (Backend)**
+- Atualize os diretórios das pastas chroma, documentos e no arquivo ``rag/backend/.env.paths``
 - Execute o arquivo ``rag/backend/app.py`` 
 
 >**Inicionalizando o Servidor Streamlit(Frontend)**
