@@ -58,8 +58,10 @@ Continuando nesta análise, é possível utilizar uma segunda consulta à LLM pa
 - Agora você pode acessar essa ``chave da API`` dentro do seu código Python usando o módulo streamlit.secrets. Exemplo: ``groq_key = st.secrets["groq_key"]``
 
 >**Inicializando o Servidor Flask (Backend)**
-- Verifique e atualize os diretórios das pastas ``chroma``, ``documentos`` e outros caminhos relevantes no arquivo ``rag/backend/.env.paths``
-- Execute o arquivo ``rag/backend/app.py`` para iniciar o servidor Flask
+- Abra o arquivo ``.env.paths`` localizado dentro da pasta ``backend`` do projeto.
+- Atualize o caminho para a pasta ``documentos``. O conteúdo do arquivo de ser algo como: ``C:\...\rag\documentos``
+- Atualize o caminho para a pasta ``chroma``. O conteúdo do arquivo de ser algo como: ``C:\...\rag\chroma``
+- Salve o arquivo e execute o arquivo ``app.py`` localizado na pasta ``backend`` para iniciar o servidor Flask
 
 >**Inicializandoo Servidor streamlit(Frontend)**
 - Em um novo terminal dedicado, execute o comando ``streamlit run rag/frontend/app.py --server.port 8080`` para iniciar o servidor streamlit na porta 8080
