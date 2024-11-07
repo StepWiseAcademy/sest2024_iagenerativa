@@ -17,7 +17,7 @@ import dotenv
 import shutil
 import argparse
 
-dotenv.load_dotenv('backend/.env.paths')
+dotenv.load_dotenv('./rag/backend/.env.paths')
 
 CHROMA_FILES = os.environ.get('CHROMA_FILES')
 DOCUMENTS = os.environ.get('DOCUMENTS')
@@ -30,7 +30,7 @@ def load_documents():
 # Divide o documento em chunks de 800 com sobreposição de 80 caractéres
 def split_documents(documents: list[Document]):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=400,
+        chunk_size=800,
         chunk_overlap=80,
         length_function=len,
         is_separator_regex=False,
@@ -84,7 +84,9 @@ def calculate_chunk_ids(chunks):
 def add_to_chroma(chunks: list[Document]):
     # Load the existing database.
     db = Chroma(
-        persist_directory=CHROMA_FILES, embedding_function=get_embedding_function()
+        persist_directory=CHROMA_FILES, 
+        embedding_function=get_embedding_function(),
+        collection_metadata={"hnsw:space": "cosine"}
     )
 
     # Calculate Page IDs.
@@ -94,6 +96,7 @@ def add_to_chroma(chunks: list[Document]):
     existing_items = db.get(include=[])  # IDs are always included by default
     existing_ids = set(existing_items["ids"])
     print(f"Number of existing documents in DB: {len(existing_ids)}")
+
     # Only add documents that don't exist in the DB.
     new_chunks = []
     for chunk in chunks_with_ids:
@@ -108,14 +111,15 @@ def add_to_chroma(chunks: list[Document]):
     else:
         print("✅ No new documents to add")
 
-def get_top5(query_text):
+def get_topN(query_text:str, n:int=2):
 
     db = Chroma(
         persist_directory=CHROMA_FILES, 
-        embedding_function=get_embedding_function()
+        embedding_function=get_embedding_function(),
+        collection_metadata={"hnsw:space": "cosine"}
     )
 
-    similarity_results = db.similarity_search_with_score("search_query: "+query_text, k=3)
+    similarity_results = db.similarity_search_with_score("search_query: "+query_text, k=n)
     context_text = [doc.page_content for doc, _score in similarity_results]
 
     return context_text
@@ -138,6 +142,55 @@ def main():
 
 if __name__ == "__main__":
     
-    main()
+    # Carregando os documentos da pasta
+    documents = load_documents()
+    print(f'Documentos carregados da pasta:\n')
+    print(documents)
 
-    print(get_top5('What is self attention?'))
+    print('-'*50)
+    print('-'*50)
+    print('\n')
+    _ = input()
+
+    # visualizando os chuncks de texto
+    print(f'Os dois primeiros chuncks:\n')
+    split_chunck = split_documents(documents)
+    print(split_chunck[:2])
+
+    print('-'*50)
+    print('-'*50)
+    print('\n')
+    _ = input()
+
+    # criando os embeddings
+    print(f'Criação dos embeddings e seus tamanhos:\n')
+    documentos = split_chunck[2].page_content
+    query = 'Qual é o objetivo de uma pesquisa?'
+    query = 'Qual é o objetivo de uma pesquisa científica?'
+
+    embed_functions = get_embedding_function()
+
+    embed_documentos = embed_functions.embed_documents(documentos)
+    embed_query = embed_functions.embed_query('Qual é o departamento?')
+
+    print(f'Embedding dos documentos: {len(embed_documentos[0])}')
+    print(f'Embedding da pergunta: {len(embed_query)}')
+
+    print('-'*50)
+    print('-'*50)
+    print('\n')
+    _ = input()
+
+    # visualizando o top 10
+    print(f'Resultado dos top 10 para a pergunta:\n** {query} **')
+    result = get_topN(query, 10)
+    for i, r in enumerate(result):
+        print('-'*50)
+        print(f'Top {i+1}:')
+        print('-'*50)
+        print(r)
+        print('-'*50)
+
+    _ = input()
+
+    #main()
