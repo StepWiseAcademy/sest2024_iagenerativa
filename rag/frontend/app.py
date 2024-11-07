@@ -7,7 +7,7 @@ from groq import Client
 from typing import Generator
 import requests
 
-groq_api_key = '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'
+groq_api_key =  st.secrets["groq_key"]
 client = Client(api_key=groq_api_key)
 
 
