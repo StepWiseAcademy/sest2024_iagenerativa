@@ -12,7 +12,7 @@ positive, negative, or neutral (Only one of these)
 
 Return only one of these three words, without any additional text, new lines, or spaces.
 
-If the classification matches, return "True" If it doesn’t match, return "False", only "True" or "False", one word.
+If the classification matches, return "True" If it doesn’t match, return "False", only one word with no spaces or line-breaks.
 
 Text:
 {text}

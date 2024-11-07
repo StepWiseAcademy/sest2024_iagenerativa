@@ -4,8 +4,10 @@ import pandas as pd
 
 NUM_MENSAGENS_CLASSIFICAR = 20
 
+# Tradução:
+# Classifique o sentimento do seguinte texto
 template_muito_ruim = """
-Classifique o sentimento do seguinte texto
+Classify the sentiment of the following text
 
 Text:
 {text}
@@ -70,7 +72,7 @@ df_reduzido = df.head(NUM_MENSAGENS_CLASSIFICAR).copy()
 df_reduzido['Tweet'] = df_reduzido['Tweet'].apply(lambda tweet: tweet.strip().replace("\n",""))
 
 # Função para aplicar o LLM ao tweet linha a linha
-df_reduzido['sentiment_llama'] = df_reduzido['Tweet'].apply(lambda tweet: query_llm(tweet))
+df_reduzido['sentiment_llama'] = df_reduzido['Tweet'].apply(lambda tweet: query_llm(tweet.replace("\n","")))
 
 # Exportar resultado para CSV
 df_reduzido.to_csv('classificacao.csv', index=False)
