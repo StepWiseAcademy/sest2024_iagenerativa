@@ -14,9 +14,9 @@ O repositório está organizado em pastas e arquivos que cobrem os seguintes tó
 Este minicurso é voltado para **iniciantes a intermediários** em aprendizado de máquina, interessados em explorar IA generativa. Recomenda-se familiaridade com Python e conceitos básicos de estatística e redes neurais.
 
 ## Instruções para solução de Rótulo
-- Baixe e instale o [ollama](https://ollama.com/)
+- Baixe e instale o ollama [link](https://ollama.com/)
 - Com Ollama instalado, abra um CMD e execute ``ollama pull llama3.2:1b``
-- Abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ollama pull [nomic-embed-text](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
+- Abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ollama pull nomic-embed-text [link](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
 - Após o pull use ``ollama serve`` em um novo CMD para abrir o servidor Ollama na porta **11434**, o endereço final fica: ``localhost:11434/``
 
 <br>Para a solução de rótulos, estes são os primeiros passos:<br/>
