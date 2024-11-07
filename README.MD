@@ -44,8 +44,8 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 - Verifique e atualize os diretórios das pastas ``chroma``, ``documentos`` e outros caminhos relevantes no arquivo ``rag/backend/.env.paths``
 - Execute o arquivo ``rag/backend/app.py`` para iniciar o servidor Flask
 
->**Inicializandoo Servidor Streamlit(Frontend)**
-- Em um novo terminal dedicado, execute o comando ``streamli run rag/frontend/app.py --server.port 8080`` para iniciar o servidor Streamlit na porta 8080
+>**Inicializandoo Servidor streamlit(Frontend)**
+- Em um novo terminal dedicado, execute o comando ``streamlit run rag/frontend/app.py --server.port 8080`` para iniciar o servidor streamlit na porta 8080
 
 ## Instruções para solução de Rótulo
 Para a solução de rótulos, primeiros passos:<br/>
