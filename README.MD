@@ -14,6 +14,10 @@ O repositório está organizado em pastas e arquivos que cobrem os seguintes tó
 Este minicurso é voltado para **iniciantes a intermediários** em aprendizado de máquina, interessados em explorar IA generativa. Recomenda-se familiaridade com Python e conceitos básicos de estatística e redes neurais.
 
 ## Instruções para solução de Rótulo
+- Baixe e instale o [ollama](https://ollama.com/)
+- Com Ollama instalado, abra um CMD e execute ``ollama pull llama3.2:1b``
+- Abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ollama pull [nomic-embed-text](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
+- Após o pull use ``ollama serve`` em um novo CMD para abrir o servidor Ollama na porta **11434**, o endereço final fica: ``localhost:11434/``
 Para a solução de rótulos, primeiros passos:<br/>
 > **Para estes passos não se esqueça de garantir que o terminal esteja aberto na pasta do projeto (No explorador de arquivos clique com o direito e selecione abrir no terminal), endereço do projeto: ``.\rotulos``**
 - Em um outro terminal execute o comando ``python -m venv venv`` para criar um ambiente virtual de desenvolvimento do Python
@@ -28,10 +32,6 @@ Continuando nesta análise, é possível utilizar uma segunda consulta à LLM pa
 - A saída desta solução pode ser encontrada no arquivo ``avaliacao.csv``
 
 ## Instruções de RAG
-- Baixe e instale o [ollama](https://ollama.com/)
-- Com Ollama instalado, abra um CMD e execute ``ollama pull llama3.2:1b``
-- Abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ollama pull [nomic-embed-text](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
-- Após o pull use ``ollama serve`` em um novo CMD para abrir o servidor Ollama na porta **11434**, o endereço final fica: ``localhost:11434/``
 
 > **Configurando o Ambiente no VSCode**
 - Abra a pasta do projeto no VSCode 
