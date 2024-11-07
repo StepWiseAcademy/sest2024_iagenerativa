@@ -11,8 +11,7 @@ O repositório está organizado em pastas e arquivos que cobrem os seguintes tó
 3. ./dist: alguns scripts opcionais criados para facilitar a instalação de certos requerimentos no **Windows**
 
 ## Público-Alvo
-Este minicurso é voltado para **iniciantes a intermediários** em aprendizado de máquina, interessados em explorar IA generativa. Recomenda-se familiaridade com Python e conceitos básicos de estátistica e redes neurais.
-
+Este minicurso é voltado para **iniciantes a intermediários** em aprendizado de máquina, interessados em explorar IA generativa. Recomenda-se familiaridade com Python e conceitos básicos de estatística e redes neurais.
 
 ## Instruções de RAG
 - Baixe e instale o [ollama](https://ollama.com/)
@@ -23,7 +22,7 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 - Instale as extensões oficiais para Python
 - Crie um novo ambiente virtual: Pressione ``Ctrl+Shift+P`` e selecione ``Python: Create Environment``
 - Se houver um arquivo ``requirements.txt`` no diretório, o VSCode mostrará uma opção para selecioná-lo. Isso instalará automaticamente as dependências
-- Após a criação do ambiente, selecione o interpretador: Pressione ``Ctral+Shift+P``, escolha ``Python: Select Interpreter`` e  selecione a versão do Python que está dentro do ``(venv)``
+- Após a criação do ambiente, selecione o interpretador: Pressione ``Ctrl+Shift+P``, escolha ``Python: Select Interpreter`` e  selecione a versão do Python que está dentro do ``(venv)``
 - Se o arquivo ``requirements.txt`` não tiver sido carregado, abra o terminal Pressionando ``Ctrl+"``, clique no botão de ``+`` e selecione Command Prompt
 - Instale as dependências manualmente executando: ``pip install -r requirements.txt``
 
@@ -33,20 +32,20 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 - Com o ambiente carregado use ``pip install -r requirements.txt``
 - Execute o código rodando o comando ``python .\llm_rotulos_simples.py``
 
->**Carregando Novos Arquivos ao Banco de Dados**
-- Adicione novos arquivos a parta ``rag/documentos/``
-- Execute individualmente o arquivo localizado no diretório ``rag/backend/chroma_db.py``
+>**Carregando Novos Arquivos no Banco de Dados**
+- Adicione novos arquivos à pasta ``rag/documentos/``
+- Execute o arquivo ``rag/backend/chroma_db.py`` para atualizar o banco de dados com os novos documentos
 
 >**Atualizando a Chave da API para o Groq AI**
-- Crie o arquivo ``rag/.streamlit/secrets.toml``, caso não exista
-- Dentro do arquivo salve a [chave da API](https://groq.com/) como: groq_key='API KEY'
+- Crie o arquivo ``rag/.streamlit/secrets.toml`` se ele ainda não existir
+- Dentro desse arquivo, salve sua [chave da API](https://groq.com/) como: groq_key='SUA_API_KEY'
 
->**Inicionalizando o Servidor Flask (Backend)**
-- Atualize os diretórios das pastas chroma, documentos e no arquivo ``rag/backend/.env.paths``
-- Execute o arquivo ``rag/backend/app.py`` 
+>**Inicializando o Servidor Flask (Backend)**
+- Verifique e atualize os diretórios das pastas ``chroma``, ``documentos`` e outros caminhos relevantes no arquivo ``rag/backend/.env.paths``
+- Execute o arquivo ``rag/backend/app.py`` para iniciar o servidor Flask
 
->**Inicionalizando o Servidor Streamlit(Frontend)**
-- Em um novo terminal dedicado execute o comando ``streamli run rag/frontend/app.py --server.port 8080``
+>**Inicializandoo Servidor Streamlit(Frontend)**
+- Em um novo terminal dedicado, execute o comando ``streamli run rag/frontend/app.py --server.port 8080`` para iniciar o servidor Streamlit na porta 8080
 
 ## Instruções para solução de Rótulo
 Para a solução de rótulos, primeiros passos:<br/>
