@@ -15,6 +15,8 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 
 ## Instruções de RAG
 - Baixe e instale o [ollama](https://ollama.com/)
+- Com Ollama instalado, abra um CMD e execute ``ollama pull llama3.2:1b``
+- Após a instalação use ``ollama serve`` para abrir o servidor Ollama na porta **11434**, o endereço final fica: ``localhost:11434/``
 - Após a instalação, abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ollama pull [nomic-embed-text](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
 
 > **Configurando o Ambiente no VSCode**
@@ -25,6 +27,7 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 - Após a criação do ambiente, selecione o interpretador: Pressione ``Ctrl+Shift+P``, escolha ``Python: Select Interpreter`` e  selecione a versão do Python que está dentro do ``(venv)``
 - Se o arquivo ``requirements.txt`` não tiver sido carregado, abra o terminal Pressionando ``Ctrl+"``, clique no botão de ``+`` e selecione Command Prompt
 - Instale as dependências manualmente executando: ``pip install -r requirements.txt``
+> Caso esteja na versão 3.9 do python foi feito um requirements.txt específico para rodar no laboratório, esta configuração é apenas recomendada no laboratório use o seguinte comando para carregar o requirements no laboratório ``pip install --no-deps -r requirements.txt``, a versão definida para estes códigos e recomendada é o Python 3.10.
 
 >**Configurando o Ambiente no Terminal**
 - Em um outro terminal execute o comando ``python -m venv venv`` para criar um ambiente virtual de desenvolvimento do Python
@@ -49,11 +52,13 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 
 ## Instruções para solução de Rótulo
 Para a solução de rótulos, primeiros passos:<br/>
-- Instalar ollama
-- Com Ollama instalado, abra um CMD e execute ``ollama pull llama3.2:1b``
-- Após a instalação use ``ollama serve`` para abrir o servidor Ollama na porta **11434**, o endereço final fica: ``localhost:11434/``
-> **Para os próximos passos não se esqueça de garantir que o terminal esteja aberto na pasta do projeto (No explorador de arquivos clique com o direito e selecione abrir no terminal)**
+> **Para estes passos não se esqueça de garantir que o terminal esteja aberto na pasta do projeto (No explorador de arquivos clique com o direito e selecione abrir no terminal), endereço do projeto: ``.\rotulos``**
 - Em um outro terminal execute o comando ``python -m venv venv`` para criar um ambiente virtual de desenvolvimento do Python
 - Carregue o ambiente virtual usando o comando ``.\venv\Scripts\activate``
 - Com o ambiente carregado use ``pip install -r requirements.txt``
 - Execute o código rodando o comando ``python .\llm_rotulos_simples.py``
+- A solução cria um arquivo de saída chamado ``classificacao.csv`` a resposta da LLM fica na coluna ``sentiment_llama``
+> **Nesta solução é interessante observar que a classificação da LLM local não é 100% precisa, isso é válido para qualquer LLM, então sempre que um trabalho com LLM necessita ser assertivo, é necessário incorporar validações mais rígidas(como scripts feitos com esse propósito) para evitar que erros atrapalhem a solução como um todo**
+ 
+Dando continuidade nesta análise, é possível utilizar uma segunda consulta à LLM para verificar a corretude das respostas recebidas na primeira consulta:
+- No mesmo terminal que a solução anterior e no mesmo ambiente utilize o seguinte comando para executar o script de avaliação ``python .\llm_avalia_rotulos.py``
