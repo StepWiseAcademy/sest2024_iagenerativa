@@ -60,5 +60,6 @@ Para a solução de rótulos, primeiros passos:<br/>
 - A solução cria um arquivo de saída chamado ``classificacao.csv`` a resposta da LLM fica na coluna ``sentiment_llama``
 > **Nesta solução é interessante observar que a classificação da LLM local não é 100% precisa, isso é válido para qualquer LLM, então sempre que um trabalho com LLM necessita ser assertivo, é necessário incorporar validações mais rígidas(como scripts feitos com esse propósito) para evitar que erros atrapalhem a solução como um todo**
  
-Dando continuidade nesta análise, é possível utilizar uma segunda consulta à LLM para verificar a corretude das respostas recebidas na primeira consulta:
+Continuando nesta análise, é possível utilizar uma segunda consulta à LLM para verificar a corretude das respostas recebidas na primeira consulta:
 - No mesmo terminal que a solução anterior e no mesmo ambiente utilize o seguinte comando para executar o script de avaliação ``python .\llm_avalia_rotulos.py``
+- A saída desta solução pode ser encontrada no arquivo ``avaliacao.csv``
