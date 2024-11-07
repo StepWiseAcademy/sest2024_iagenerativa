@@ -52,8 +52,10 @@ Continuando nesta análise, é possível utilizar uma segunda consulta à LLM pa
 - Execute o arquivo ``rag/backend/chroma_db.py`` para atualizar o banco de dados com os novos documentos
 
 >**Atualizando a Chave da API para o Groq AI**
-- Crie o arquivo ``rag/.streamlit/secrets.toml`` se ele ainda não existir
-- Dentro desse arquivo, salve sua [chave da API](https://groq.com/) como: groq_key='SUA_API_KEY'
+- Dentro da pasta do seu projeto ``rag``, crie uma nova pasta chamada ``.streamlit``
+- Dentro da pasta ``.streamlit``, crie um arquivo chamado ``secrets.toml``
+- Abra o arquivo ``secrets.toml`` e insira a [chave da API](https://groq.com/) fornecida pelo Groq. O conteúdo do arquivo deve ser: groq_key='SUA_API_KEY'
+- Agora você pode acessar essa ``chave da API`` dentro do seu código Python usando o módulo streamlit.secrets. Exemplo: ``groq_key = st.secrets["groq"]["groq_key"]``
 
 >**Inicializando o Servidor Flask (Backend)**
 - Verifique e atualize os diretórios das pastas ``chroma``, ``documentos`` e outros caminhos relevantes no arquivo ``rag/backend/.env.paths``
