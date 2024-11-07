@@ -59,10 +59,11 @@ Continuando nesta análise, é possível utilizar uma segunda consulta à LLM pa
 
 >**Inicializando o Servidor Flask (Backend)**
 - Abra o arquivo ``.env.paths`` localizado dentro da pasta ``backend`` do projeto.
-- Atualize o caminho para a pasta ``documentos``. O conteúdo do arquivo de ser algo como: ``C:\...\rag\documentos``
-- Atualize o caminho para a pasta ``chroma``. O conteúdo do arquivo de ser algo como: ``C:\...\rag\chroma``
+- Atualize o caminho para a pasta ``documentos``. O conteúdo do arquivo de ser algo como: ``DOCUMENTS='C:\...\rag\documentos'``
+- Atualize o caminho para a pasta ``chroma``. O conteúdo do arquivo de ser algo como: ``CHROMA_FILES='C:\...\rag\chroma'``
 - Salve o arquivo e execute o arquivo ``app.py`` localizado na pasta ``backend`` para iniciar o servidor Flask
 
 >**Inicializandoo Servidor streamlit(Frontend)**
-- Em um novo terminal dedicado, execute o comando ``streamlit run rag/frontend/app.py --server.port 8080`` para iniciar o servidor streamlit na porta 8080
+- Em um novo terminal dedicado, vá até a pasta ``fronted``
+- Dentro da pasta execute o comando ``streamlit run app.py --server.port 8080`` para iniciar o servidor streamlit na porta 8080
 
