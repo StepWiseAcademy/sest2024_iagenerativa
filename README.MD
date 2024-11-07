@@ -18,7 +18,8 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 - Com Ollama instalado, abra um CMD e execute ``ollama pull llama3.2:1b``
 - Abra o CMD ou Terminal e execute o seguinte comando para fazer o pull do modelo: ollama pull [nomic-embed-text](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
 - Após o pull use ``ollama serve`` em um novo CMD para abrir o servidor Ollama na porta **11434**, o endereço final fica: ``localhost:11434/``
-Para a solução de rótulos, primeiros passos:<br/>
+
+<br>Para a solução de rótulos, estes são os primeiros passos:<br/>
 > **Para estes passos não se esqueça de garantir que o terminal esteja aberto na pasta do projeto (No explorador de arquivos clique com o direito e selecione abrir no terminal), endereço do projeto: ``.\rotulos``**
 - Em um outro terminal execute o comando ``python -m venv venv`` para criar um ambiente virtual de desenvolvimento do Python
 - Carregue o ambiente virtual usando o comando ``.\venv\Scripts\activate``
