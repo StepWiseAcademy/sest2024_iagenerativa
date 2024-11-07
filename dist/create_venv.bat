@@ -1,5 +1,5 @@
 @echo off
-set "PYTHON_PATH=C:\caminho\para\python.exe"
+set "PYTHON_PATH=Caminho\para\python.exe"
 
 :: Verifica se o Python existe no caminho especificado
 if not exist "%PYTHON_PATH%" (
@@ -13,4 +13,9 @@ if not exist "%PYTHON_PATH%" (
 "%PYTHON_PATH%" -m venv venv
 
 echo Ambiente virtual criado com sucesso na pasta atual.
-pause
+
+echo Ativando ambiente.
+
+call .\venv\Scripts\activate
+
+cmd /k
