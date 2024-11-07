@@ -54,7 +54,7 @@ Continuando nesta análise, é possível utilizar uma segunda consulta à LLM pa
 >**Atualizando a Chave da API para o Groq AI**
 - Dentro da pasta ``frontend`` do seu projeto ``rag``, crie uma nova pasta chamada ``.streamlit``
 - Dentro da pasta ``.streamlit``, crie um arquivo chamado ``secrets.toml``
-- Abra o arquivo ``secrets.toml`` e insira a [chave da API](https://groq.com/) fornecida pelo Groq. O conteúdo do arquivo deve ser: groq_key='SUA_API_KEY'
+- Abra o arquivo ``secrets.toml`` e insira a [chave da API](https://groq.com/) fornecida pelo Groq. O conteúdo do arquivo deve ser:  ``groq_key='SUA_API_KEY'``
 - Agora você pode acessar essa ``chave da API`` dentro do seu código Python usando o módulo streamlit.secrets. Exemplo: ``groq_key = st.secrets["groq"]["groq_key"]``
 
 >**Inicializando o Servidor Flask (Backend)**
