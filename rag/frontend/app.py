@@ -7,7 +7,7 @@ from groq import Client
 from typing import Generator
 import requests
 
-groq_api_key = st.secrets['groq_key']
+groq_api_key = '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'
 client = Client(api_key=groq_api_key)
 
 
@@ -78,7 +78,7 @@ with col1:
     c1, c2 = st.columns(2)
 
     with c1:
-        st.header("SEST Assistente")
+        st.header("Assistente de Pesquisa")
 
     with c2:
 
@@ -136,7 +136,4 @@ with col1:
             
             st.session_state.messages.append({'role':'assistant', 'content': response})
 
-if __name__ == '__main__':
-    sys.argv = ["streamlit", "run", "app.py"]
-    sys.exit(cli.main())
 
