@@ -48,8 +48,8 @@ Continuando nesta análise, é possível utilizar uma segunda consulta à LLM pa
 - Com o ambiente carregado use ``pip install -r requirements.txt``
 
 >**Carregando Novos Arquivos no Banco de Dados**
-- Adicione novos arquivos à pasta ``rag/documentos/``
-- Execute o arquivo ``rag/backend/chroma_db.py`` para atualizar o banco de dados com os novos documentos
+- Dentro da pasta do projeto ``rag``, crie uma nova pasta chamada ``documentos`` para armazenar os arquivos que serão carregados no banco de dados.
+- Execute o arquivo ``chroma_db.py`` localizado na pasta ``backend``, para atualizar o banco de dados com os novos arquivos
 
 >**Atualizando a Chave da API para o Groq AI**
 - Dentro da pasta ``frontend`` do seu projeto ``rag``, crie uma nova pasta chamada ``.streamlit``
