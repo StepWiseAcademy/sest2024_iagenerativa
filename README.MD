@@ -46,7 +46,6 @@ Continuando nesta análise, é possível utilizar uma segunda consulta à LLM pa
 - Em um outro terminal execute o comando ``python -m venv venv`` para criar um ambiente virtual de desenvolvimento do Python
 - Carregue o ambiente virtual usando o comando ``.\venv\Scripts\activate``
 - Com o ambiente carregado use ``pip install -r requirements.txt``
-- Execute o código rodando o comando ``python .\llm_rotulos_simples.py``
 
 >**Carregando Novos Arquivos no Banco de Dados**
 - Adicione novos arquivos à pasta ``rag/documentos/``
