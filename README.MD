@@ -23,6 +23,7 @@ Este minicurso é voltado para **iniciantes a intermediários** em aprendizado d
 > **Para estes passos não se esqueça de garantir que o terminal esteja aberto na pasta do projeto (No explorador de arquivos clique com o direito e selecione abrir no terminal), endereço do projeto: ``.\rotulos``**
 - Em um outro terminal execute o comando ``python -m venv venv`` para criar um ambiente virtual de desenvolvimento do Python
 - Carregue o ambiente virtual usando o comando ``.\venv\Scripts\activate``
+- Neste passo existe a possibilidade do erro 'execution of scripts is disabled on this system.' aparecer, para resolver este problema ou certifique-se de abrir um prompt de comando e não o powershell ou se quiser configurar o powershell para executar scripts siga este [tutorial](https://answers.microsoft.com/pt-br/windows/forum/all/permitir-a-execu%C3%A7%C3%A3o-de-scripts-no/f6b195cf-0be7-46e2-b88c-358c79f78343)
 - Com o ambiente carregado use ``pip install -r requirements.txt``
 - Execute o código rodando o comando ``python .\llm_rotulos_simples.py``
 - A solução cria um arquivo de saída chamado ``classificacao.csv`` a resposta da LLM fica na coluna ``sentiment_llama``
